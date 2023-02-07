@@ -1,5 +1,5 @@
 HyP3
-HyP3-sdk
+HyP3-SDK
 HyP3-cookiecutter
 HyP3-gamma
 HyP3-autorift
