@@ -1,3 +1,4 @@
+name: Build PDF zip file
 on: [push]
 
 jobs:
