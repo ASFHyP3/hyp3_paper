@@ -34,6 +34,9 @@ bibliography: paper.bib
 
 TO DO
 
+This [link works](https://joss.readthedocs.io/en/latest/index.html)
+This [link is nonsense](https://jackie.madeup.alink/yousillygoose)
+
 # Statement of need
 
 TO DO
