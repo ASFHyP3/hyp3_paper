@@ -12,3 +12,4 @@ jobs:
         uses: lycheeverse/lychee-action@v1.5.4
         with:
           files: "**/*.md *.md **/*.bib"
+          fail: true
