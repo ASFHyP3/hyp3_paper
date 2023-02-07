@@ -11,3 +11,4 @@ jobs:
         with:
           files: "**/*.md"
           quiet: true
+          dictionaries: ".github/dictionary.txt"
