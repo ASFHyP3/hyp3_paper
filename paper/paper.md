@@ -34,8 +34,6 @@ bibliography: paper.bib
 
 TO DO
 
-This [link works](https://joss.readthedocs.io/en/latest/index.html)
-
 # Statement of need
 
 TO DO
