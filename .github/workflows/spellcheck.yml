@@ -10,5 +10,5 @@ jobs:
       - uses: tbroadley/spellchecker-cli-action@v1
         with:
           files: "**/*.md"
-          quiet: true
+          quiet: false
           dictionaries: ".github/dictionary.txt"
