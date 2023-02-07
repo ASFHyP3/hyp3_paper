@@ -50,7 +50,7 @@ TO DO
 
 TO DO 
 
-# Acknowledgements
+# Acknowledgments
 
 TO DO 
 
