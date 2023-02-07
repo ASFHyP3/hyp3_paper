@@ -15,4 +15,4 @@
     - DockerizedTopsApp
     - Watermap
 - Contributors
-- Acknowledgement
+- Acknowledgment
