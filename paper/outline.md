@@ -8,7 +8,7 @@
 - HyP3 description
     - HyP3 development history
         - Started as a student project at UAF
-        - Value was evident, so was turned into a full-fledge application
+        - Value was evident, so was turned into a full-fledged application
             - Added automated testing, CI/CD, IaC
     - HyP3
         - Architecture diagram
@@ -30,7 +30,7 @@
         - Programmatic Python interface to HyP3 API
         - Can submit, monitor, and download jobs
     - Vertex Integration
-        - GUI frontend that allows people to submit, monitor, and download jobs
+        - GUI front-end that allows people to submit, monitor, and download jobs
     - HyP3-cookiecutter
         - Template for creating HyP3 containerized plugins
 - Projects utilizing HyP3
