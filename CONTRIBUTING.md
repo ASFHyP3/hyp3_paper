@@ -39,5 +39,5 @@ Guidelines are less solidified for Markdown projects, but pleases adhere to thes
 ### GitHub Actions
 We have implemented several GitHub Actions that are run when PRs are created, or new commits are pushed to an existing PR. These include checks for spelling and valid links, as well as an action that builds a JOSS formatted PDF of `paper/paper.md` if any of these actions fail, please take the actions necessary to ensure they pass.
 
-In some cases, domain-specific words are flagged by the spell check action as misspelled since they are not in the spell check's dictionary. If this happens, please add the relevant words to the dictionary file (IN ALPHABETICAL ORDER) located at `.github/dictionary.txt`. This should remove the issue for these words.
+In some cases, domain-specific words are flagged by the spell check action as misspelled since they are not in the spell check's dictionary. If this happens, please add the relevant words (in alphabetical order) to the dictionary file located at `.github/dictionary.txt`. This should remove the issue for these words.
 
