@@ -1,10 +1,13 @@
+DockerizedTopsApp
+GitOps
 HyP3
 HyP3-SDK
+HyP3-autorift
 HyP3-cookiecutter
 HyP3-gamma
-HyP3-autorift
-DockerizedTopsApp
-Watermap
-TODO
+HyP3-paper
+JOSS
 PR
 PRs
+TODO
+Watermap
