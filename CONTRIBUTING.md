@@ -16,7 +16,7 @@ The basic steps are:
    ```
 3. Add this repository as an `upstream` remote
    ```
-   git remote add upstream https://github.com/ASFHyP3/hyp3.git
+   git remote add upstream https://github.com/ASFHyP3/hyp3-paper.git
    ```  
 4. Create a feature branch based on the upstream/develop branch
    ```
