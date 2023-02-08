@@ -18,7 +18,7 @@
                 - Swagger UI using OpenAPI specification
             - Post Request logged in DynamoDB NoSQL database
             - Lambda runs on a schedule and watches DynamoDB jobs table for new jobs
-            - AWS StepFunction defines workflow for a particular job type
+            - AWS Step Functions defines workflow for a particular job type
                 - Involves steps such as selecting appropriate plugin container for job type, watching for failures, logging, uploading of completed jobs, updating DynamoDB table, automatic retries
             - AWS Batch runs appropriate plugin container for job type
                 - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
