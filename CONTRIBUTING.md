@@ -27,7 +27,7 @@ The basic steps are:
    ```
    git push -u origin [NAME]
    ```
-6. Propose your changes by opening a pull request to `ASFHyP3/hyp3`'s `develop` branch
+6. Propose your changes by opening a pull request to `ASFHyP3/hyp3-paper`'s `develop` branch
 
 ### Guidelines
 Guidelines are less solidified for Markdown projects, but pleases adhere to these rules:
