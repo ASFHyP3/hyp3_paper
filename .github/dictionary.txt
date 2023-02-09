@@ -12,11 +12,16 @@ HyP3-gamma
 HyP3-paper
 HyP3-SDK
 IaC
+InSAR
 JOSS
+JS
+lifecycle
 NoSQL
 OpenAPI
 PR
+pre-processing
 PRs
+RTC
 S3
 SAR
 scalable
