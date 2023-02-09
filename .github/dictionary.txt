@@ -1,5 +1,7 @@
+ASF
 CloudFormation
 DockerizedTopsApp
+DynamoDB
 front-end
 full-fledged
 GitOps
