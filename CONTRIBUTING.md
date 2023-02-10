@@ -34,7 +34,8 @@ Guidelines are less solidified for Markdown projects, but pleases adhere to thes
 
 1. Use US English spellings
 2. Paragraphs should be soft-wrapped, with no maximum line length
-3. Refer to the [JOSS submission guidelines](https://joss.readthedocs.io/en/latest/submitting.html) when creating sections headers and layout
+3. Indents should be 4 spaces
+4. Refer to the [JOSS submission guidelines](https://joss.readthedocs.io/en/latest/submitting.html) when creating sections headers and layout
 
 ### GitHub Actions
 We have implemented several GitHub Actions that are run when PRs are created, or new commits are pushed to an existing PR. These include checks for spelling and valid links, as well as an action that builds a JOSS formatted PDF of `paper/paper.md` if any of these actions fail, please take the actions necessary to ensure they pass.
