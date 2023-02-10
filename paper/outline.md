@@ -18,12 +18,12 @@
             - Added automated testing, CI/CD, IaC
     - HyP3 Architecture 
         - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
+          - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
         - Cloud-native (AWS) API-based processing workflow for satellite imagery 
         - High throughput, scalable and cost-effective computing, not high performance computing
         - Designed to work with any image processing pipeline via use of containerized batch jobs for processing
         - Infrastructure as code with AWS CloudFormation Templates
           - CF templates make new, specialized deployments easy
-        - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation
         - API Gateway receives GET, POST requests
         - Post Request logged in DynamoDB NoSQL database
         - AWS Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
