@@ -2,8 +2,10 @@ AOI
 AOIs
 ASF
 CloudFormation
+cookiecutter
 DockerizedTopsApp
 DynamoDB
+ECR
 ESA
 front-end
 full-fledged
