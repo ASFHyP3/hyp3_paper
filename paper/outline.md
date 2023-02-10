@@ -28,7 +28,7 @@
         - Post Request logged in DynamoDB NoSQL database
         - AWS Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
         - AWS Step Functions defines workflow for a particular job type
-            - Select appropriate plugin container and memory requirements for job type
+            - Delegate appropriate plugin container and memory requirements for job type
             - Watch for failures, log, and automatically retry
             - Upload completed jobs and updates DynamoDB table with job status (FAILED, SUCCEEDED)
         - AWS Batch runs appropriate plugin container for job type
@@ -36,9 +36,10 @@
             - Scales according to usage compared to monthly budget allowance (using AWS Cost Explorer)
         - AWS S3 buckets house results download 
           - Output data are publicly available for 2 weeks 
-        - Plugin development via HyP3-cookiecutter
-            - Template for creating HyP3 containerized plugins
-            - AWS ECR repositories straightforward to create for cookiecutter containers
+    - Plugin development via HyP3-cookiecutter
+        - Template for creating HyP3 containerized plugins
+          - Defines the entrypoint so that HyP3 can understand how to run the container
+        - AWS ECR repositories straightforward to create for cookiecutter containers
     - HyP3 Access
         - Programmatic access
             - HyP3 API
@@ -52,8 +53,9 @@
               - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
               - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
-      - HyP3-GAMMA 
+    - HyP3-GAMMA 
       - RTC and InSAR processing workflows on demand
+      - Commercial software 
     - DockerizedTopsApp
       - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
     - HyP3-AutoRIFT
