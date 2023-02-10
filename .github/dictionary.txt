@@ -1,3 +1,5 @@
+AOI
+AOIs
 ASF
 CloudFormation
 DockerizedTopsApp
@@ -6,6 +8,7 @@ ESA
 front-end
 full-fledged
 geocoded
+Geocoded
 GitOps
 GUNW
 HyP3
@@ -21,13 +24,16 @@ HyP3-SDK
 IaC
 InSAR
 Interferogram
+Interferograms
 ITS_LIVE
 JOSS
 JPL
 JS
 lifecycle
 NoSQL
+OnDemand
 OpenAPI
+polarizations
 PR
 pre-processing
 PRs

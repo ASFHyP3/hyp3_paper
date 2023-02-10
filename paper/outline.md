@@ -21,35 +21,39 @@
         - Cloud-native (AWS) API-based processing workflow for satellite imagery 
         - High throughput, scalable and cost-effective computing, not high performance computing
         - Designed to work with any image processing pipeline via use of containerized batch jobs for processing
+        - Infrastructure as code with AWS CloudFormation Templates
+          - CF templates make new, specialized deployments easy
         - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation
-            - API Gateway that receives GET, POST requests
-            - Post Request logged in DynamoDB NoSQL database
-            - Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
-            - AWS Step Functions defines workflow for a particular job type
-                - Select appropriate plugin container and memory requirements for job type
-                - Watch for failures, log, and automatically retry
-                - Upload completed jobs and updates DynamoDB table with job status (FAILED, SUCCEEDED)
-            - AWS Batch runs appropriate plugin container for job type
-                - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
-                - Scales according to usage compared to monthly budget allowance
-            - AWS S3 buckets house results download 
-              - Output data are publicly available for 2 weeks 
+        - API Gateway receives GET, POST requests
+        - Post Request logged in DynamoDB NoSQL database
+        - AWS Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
+        - AWS Step Functions defines workflow for a particular job type
+            - Select appropriate plugin container and memory requirements for job type
+            - Watch for failures, log, and automatically retry
+            - Upload completed jobs and updates DynamoDB table with job status (FAILED, SUCCEEDED)
+        - AWS Batch runs appropriate plugin container for job type
+            - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
+            - Scales according to usage compared to monthly budget allowance (using AWS Cost Explorer)
+        - AWS S3 buckets house results download 
+          - Output data are publicly available for 2 weeks 
+        - Plugin development via HyP3-cookiecutter
+            - Template for creating HyP3 containerized plugins
+            - AWS ECR repositories straightforward to create for cookiecutter containers
     - HyP3 Access
-        - HyP3 API
-          - Swagger UI with OpenAPI specification
-          - Can submit and monitor jobs
-        - HyP3-SDK
-          - Programmatic Python interface to HyP3 API
-          - Can submit, monitor, and download jobs
-        - Vertex Integration
-          - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
-          - Provides tools for selecting pairs and stacks for InSAR analysis
-    - Plugin development via HyP3-cookiecutter
-        - Template for creating HyP3 containerized plugins
+      - Programmatic access
+            - HyP3 API
+              - Swagger UI with OpenAPI specification
+              - Can submit and monitor jobs
+            - HyP3-SDK
+              - Programmatic Python interface to HyP3 API
+              - Can submit, monitor, and download jobs
+      - Web Access
+            - Vertex Integration
+              - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
+              - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
     - HyP3-GAMMA 
       - RTC and InSAR processing workflows on demand
-      - 
     - DockerizedTopsApp
       - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
     - HyP3-AutoRIFT
