@@ -6,39 +6,39 @@
     - Most SAR data require some pre-processing before they are analysis-ready
     - SAR processing is computationally-intensive and requires complicated/expensive software
     - ESA Sentinel-1 mission provides near real-time global SAR monitoring 
-      - There is too much satellite imagery for anybody to use
-      - OnDemand products allow for users to select AOIs for pre-processing workflow
+        - There is too much satellite imagery for anybody to use
+        - OnDemand products allow for users to select AOIs for pre-processing workflow
     - Related work
 - HyP3 description
     - HyP3 development history
-      - Started as a student summer intern project at UAF in 2016
-      - ASF DAAC was entirely on-prem in 2016, and pivot to AWS was on the horizon with rumblings of NISAR
-      - Originally designed for either on-prem or AWS
-        - Had hybrid of both on-prem and cloud components
-        - Emphasis on subscriptions
-      - ASF transition to AWS made evident the benefits of transitioning fully to the cloud
-          - Distributed first image from S3 in 2016
-          - Release of AWS Batch service offered opportunity to transition HyP3
-      - In 2019 HyP3 was rewritten to be cloud native with emphasis on:
-        - serverless architecture
-        - scalability
-        - containerized workflows
-        - high-throughput computing
-      - Release of HyP3-SDK and integration with ASF's data search website (Vertx) greatly improved usability
-      - Pubic release on cloud HyP3 in 2019, with free processing of RTC/InSAR workflows for scientists
-      - Early success led to creation of additional HyP3 deployments for interested partners
-        - JPL Access-19 project
-        - JPL ITS_LIVE project
-        - Cargill
-        - BGC Engineering
+        - Started as a student summer intern project at UAF in 2016
+        - ASF DAAC was entirely on-prem in 2016, and pivot to AWS was on the horizon with rumblings of NISAR
+        - Originally designed for either on-prem or AWS
+            - Had hybrid of both on-prem and cloud components
+            - Emphasis on subscriptions
+        - ASF transition to AWS made evident the benefits of transitioning fully to the cloud
+            - Distributed first image from S3 in 2016
+            - Release of AWS Batch service offered opportunity to transition HyP3
+        - In 2019 HyP3 was rewritten to be cloud native with emphasis on:
+            - serverless architecture
+            - scalability
+            - containerized workflows
+            - high-throughput computing
+        - Release of HyP3-SDK and integration with ASF's data search website (Vertx) greatly improved usability
+        - Pubic release on cloud HyP3 in 2019, with free processing of RTC/InSAR workflows for scientists
+        - Early success led to creation of additional HyP3 deployments for interested partners
+            - JPL Access-19 project
+            - JPL ITS_LIVE project
+            - Cargill
+            - BGC Engineering
     - HyP3 Architecture 
         - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
-          - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
+            - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
         - Cloud-native (AWS) API-based processing workflow for satellite imagery 
         - High throughput, scalable and cost-effective computing, not high performance computing
         - Designed to work with any image processing pipeline via use of containerized batch jobs for processing
         - Infrastructure as code with AWS CloudFormation Templates
-          - CF templates make new, specialized deployments easy
+            - CF templates make new, specialized deployments easy
         - API Gateway receives GET, POST requests
         - Post Request logged in DynamoDB NoSQL database
         - AWS Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
@@ -50,33 +50,33 @@
             - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
             - Scales according to usage compared to monthly budget allowance (using AWS Cost Explorer)
         - AWS S3 buckets house results download 
-          - Output data are publicly available for 2 weeks 
+            - Output data are publicly available for 2 weeks 
     - Plugin development via HyP3-cookiecutter
         - Template for creating HyP3 containerized plugins
-          - Defines the entrypoint so that HyP3 can understand how to run the container
+            - Defines the entrypoint so that HyP3 can understand how to run the container
         - AWS ECR repositories straightforward to create for cookiecutter containers
     - HyP3 Access
         - Programmatic access
             - HyP3 API
-              - Swagger UI with OpenAPI specification
-              - Can submit and monitor jobs
+                - Swagger UI with OpenAPI specification
+                - Can submit and monitor jobs
             - HyP3-SDK
-              - Programmatic Python interface to HyP3 API
-              - Can submit, monitor, and download jobs
+                - Programmatic Python interface to HyP3 API
+                - Can submit, monitor, and download jobs
         - Web Access
             - Vertex Integration
-              - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
-              - Provides tools for selecting pairs and stacks for InSAR analysis
+                - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
+                - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
     - HyP3-GAMMA 
-      - RTC and InSAR processing workflows on demand
-      - Commercial software 
+        - RTC and InSAR processing workflows on demand
+        - Commercial software 
     - DockerizedTopsApp
-      - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
+        - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
     - HyP3-AutoRIFT
-      - Specialized algorithm finding pixel displacement between two radar or optical images developed by the ITS_LIVE team at JPL `[@Lei:2021]`
+        - Specialized algorithm finding pixel displacement between two radar or optical images developed by the ITS_LIVE team at JPL `[@Lei:2021]`
     - Watermap
-      - Processing utilizing RTC products with different polarizations to estimate flood extent and depth
+        - Processing utilizing RTC products with different polarizations to estimate flood extent and depth
 - Future Work
 - Contributors
 - Acknowledgments
