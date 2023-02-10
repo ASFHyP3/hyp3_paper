@@ -40,19 +40,19 @@
             - Template for creating HyP3 containerized plugins
             - AWS ECR repositories straightforward to create for cookiecutter containers
     - HyP3 Access
-      - Programmatic access
+        - Programmatic access
             - HyP3 API
               - Swagger UI with OpenAPI specification
               - Can submit and monitor jobs
             - HyP3-SDK
               - Programmatic Python interface to HyP3 API
               - Can submit, monitor, and download jobs
-      - Web Access
+        - Web Access
             - Vertex Integration
               - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
               - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
-    - HyP3-GAMMA 
+      - HyP3-GAMMA 
       - RTC and InSAR processing workflows on demand
     - DockerizedTopsApp
       - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
