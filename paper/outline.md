@@ -3,48 +3,66 @@
 ## Outline
 - Summary
 - Statement of need
-    - There is too much satellite imagery for anybody to use
     - Most SAR data require some pre-processing before they are analysis-ready
-    - SAR is computationally-intensive and requires complicated/expensive software
+    - SAR processing is computationally-intensive and requires complicated/expensive software
+    - ESA Sentinel-1 mission provides near real-time global SAR monitoring 
+      - There is too much satellite imagery for anybody to use
+      - OnDemand products allow for users to select AOIs for pre-processing workflow
     - Related work
 - HyP3 description
     - HyP3 development history
         - Started as a student project at UAF
+          - RTC processing workflow established and team wanted to make it more accessible/automated
+          - Goal to integrate cloud-based computing (where 'Hybrid' in HyP3 originated)
         - Value was evident, so was turned into a full-fledged application
             - Added automated testing, CI/CD, IaC
     - HyP3 Architecture 
-        - Architecture diagram
-        - Cloud native (AWS) API-based processing workflow for satellite imagery (focus on SAR)
-        - Emphasis on high throughput, scalable and cost-effective computing, not high performance computing
+        - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
+          - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
+        - Cloud-native (AWS) API-based processing workflow for satellite imagery 
+        - High throughput, scalable and cost-effective computing, not high performance computing
         - Designed to work with any image processing pipeline via use of containerized batch jobs for processing
-        - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation
-            - API Gateway that receives GET, POST requests
-            - Post Request logged in DynamoDB NoSQL database
-            - Lambda runs on a schedule and watches DynamoDB jobs table for new jobs
-            - AWS Step Functions defines workflow for a particular job type
-                - Selects appropriate plugin container and memory requirements for job type, watching for failures, logging, and automatically retrying
-                - Uploads completed jobs and updates DynamoDB table with job status (FAILED, SUCCEEDED)
-            - AWS Batch runs appropriate plugin container for job type
-                - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
-                - Scales according to usage compared to monthly budget allowance
-            - Results are uploaded to public S3 bucket for download (mention lifecycle?)
-    - HyP3 Access
-        - HyP3 API
-          - Swagger UI with OpenAPI specification
-          - Can submit and monitor jobs
-        - HyP3-SDK
-          - Programmatic Python interface to HyP3 API
-          - Can submit, monitor, and download jobs
-        - Vertex Integration
-          - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
-          - Provides tools for selecting pairs and stacks for InSAR analysis
+        - Infrastructure as code with AWS CloudFormation Templates
+          - CF templates make new, specialized deployments easy
+        - API Gateway receives GET, POST requests
+        - Post Request logged in DynamoDB NoSQL database
+        - AWS Lambda runs on a schedule and watches DynamoDB jobs table for new (PENDING) jobs
+        - AWS Step Functions defines workflow for a particular job type
+            - Delegate appropriate plugin container and memory requirements for job type
+            - Watch for failures, log, and automatically retry
+            - Upload completed jobs and updates DynamoDB table with job status (FAILED, SUCCEEDED)
+        - AWS Batch runs appropriate plugin container for job type
+            - UTILIZES SPOT INSTANCES FOR COST MANAGEMENT
+            - Scales according to usage compared to monthly budget allowance (using AWS Cost Explorer)
+        - AWS S3 buckets house results download 
+          - Output data are publicly available for 2 weeks 
     - Plugin development via HyP3-cookiecutter
         - Template for creating HyP3 containerized plugins
+          - Defines the entrypoint so that HyP3 can understand how to run the container
+        - AWS ECR repositories straightforward to create for cookiecutter containers
+    - HyP3 Access
+        - Programmatic access
+            - HyP3 API
+              - Swagger UI with OpenAPI specification
+              - Can submit and monitor jobs
+            - HyP3-SDK
+              - Programmatic Python interface to HyP3 API
+              - Can submit, monitor, and download jobs
+        - Web Access
+            - Vertex Integration
+              - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
+              - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
-    - HyP3-gamma # JS - Might end up combined/closely tied with DockerizedTopsApp? How much will we discuss test-only plugins?
+    - HyP3-GAMMA 
+      - RTC and InSAR processing workflows on demand
+      - Commercial software 
     - DockerizedTopsApp
-    - HyP3-autorift
+      - open source InSAR processing for Sentinel-1 Geocoded Unwrapped Interferograms (GUNW)
+    - HyP3-AutoRIFT
+      - Specialized algorithm finding pixel displacement between two radar or optical images developed by the ITS_LIVE team at JPL `[@Lei:2021]`
     - Watermap
+      - Processing utilizing RTC products with different polarizations to estimate flood extent and depth
+- Future Work
 - Contributors
 - Acknowledgments
 
