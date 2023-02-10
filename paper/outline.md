@@ -11,11 +11,26 @@
     - Related work
 - HyP3 description
     - HyP3 development history
-        - Started as a student project at UAF
-          - RTC processing workflow established and team wanted to make it more accessible/automated
-          - Goal to integrate cloud-based computing (where 'Hybrid' in HyP3 originated)
-        - Value was evident, so was turned into a full-fledged application
-            - Added automated testing, CI/CD, IaC
+      - Started as a student summer intern project at UAF in 2016
+      - ASF DAAC was entirely on prem in 2016, and pivot to AWS was on the horizon with rumblings of NISAR
+      - Origionally designed for either on-prem or AWS
+        - Had hybrid of both on-prem and cloud components
+        - Emphasis on subscriptions
+      - ASF transition to AWS made evident the benefits of transitioning fully to the cloud
+          - Distributed first image from S3 in 2016
+          - Release of AWS Batch service offered opportunity to transition HyP3
+      - In 2019 HyP3 was rewritten to be cloud native with emphasis on:
+        - serverless architecture
+        - scalability
+        - containerized workflows
+        - high-throughput computing
+      - Release of HyP3-SDK and integration with ASF's data search website (Vertx) greatly improved usability
+      - Pubic release on cloud HyP3 in 2019, with free processing of RTC/InSAR workflows for scientists
+      - Early success led to creation of additional HyP3 deployments for interested partners
+        - JPL Access-19 project
+        - JPL ITS_LIVE project
+        - Cargill
+        - BGC Engineering
     - HyP3 Architecture 
         - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
           - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
