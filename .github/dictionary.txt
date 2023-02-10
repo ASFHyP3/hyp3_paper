@@ -6,6 +6,8 @@ cookiecutter
 DockerizedTopsApp
 DynamoDB
 ECR
+entrypoint
+entrypoints
 ESA
 front-end
 full-fledged
