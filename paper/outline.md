@@ -3,12 +3,28 @@
 ## Outline
 - Summary
 - Statement of need
+    - As remote sensing archives become larger it's becoming infeasible to process this data locally
+    - This has promoted the movement of workflows to the cloud
+    - This is particularly true of SAR data, which is larger and more complex
     - Most SAR data require some pre-processing before they are analysis-ready
     - SAR processing is computationally-intensive and requires complicated/expensive software
     - ESA Sentinel-1 mission provides near real-time global SAR monitoring 
         - There is too much satellite imagery for anybody to use
-        - OnDemand products allow for users to select AOIs for pre-processing workflow
-    - Related work
+        - On-demand products allow for users to select AOIs for pre-processing workflow
+    - State of the field
+        - SlideRule
+            - Well-designed service for ICESAT missions
+        - Descartes Labs
+            - Provides cloud SAR processing for larger customers at cost
+        - Google Earth Engine
+            - Provides services for cloud image processing
+            - SAR is not focus
+            - Not open source
+            - Lacks standardized workflows
+        - Microsoft Planetary Computer
+            - Open source cloud image processing
+            - Limited SAR support
+            - Lacks standardized workflows
 - HyP3 description
     - HyP3 development history
         - Started as a student summer intern project at UAF in 2016
@@ -24,13 +40,14 @@
             - scalability
             - containerized workflows
             - high-throughput computing
-        - Release of HyP3-SDK and integration with ASF's data search website (Vertx) greatly improved usability
+        - Release of HyP3-SDK and integration with ASF's data search website (Vertex) greatly improved usability
         - Pubic release on cloud HyP3 in 2019, with free processing of RTC/InSAR workflows for scientists
         - Early success led to creation of additional HyP3 deployments for interested partners
             - JPL Access-19 project
             - JPL ITS_LIVE project
             - Cargill
             - BGC Engineering
+        - Official release and support of HyP3 within the NASA EarthData cloud
     - HyP3 Architecture 
         - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
             - (buzzwords: - API Gateway, Lambda, Dynamo DB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
@@ -68,7 +85,7 @@
                 - GUI front-end that allows people to submit RTC jobs, and monitor and download all types of jobs
                 - Provides tools for selecting pairs and stacks for InSAR analysis
 - Projects utilizing HyP3
-    - HyP3-GAMMA 
+    - HyP3-GAMMA
         - RTC and InSAR processing workflows on demand
         - Commercial software 
     - DockerizedTopsApp
@@ -78,8 +95,17 @@
     - Watermap
         - Processing utilizing RTC products with different polarizations to estimate flood extent and depth
 - Future Work
+    - Continued offering of data processing at no cost
+    - Expanding suite of HyP3 plugins
+    - Additional HyP3 deployments
 - Contributors
+    - Project managers
+    - Student teams
+    - Current HyP3 team
+    - Writing team
 - Acknowledgments
+    - All grants that have supported work
 
 ## Resources
 [HyP3 architecture simplified](https://docs.google.com/document/d/1HcSmjMB9YSBgyqb6WBZpu0euvIrzLlzLuCOI1cssGA0/edit)
+[SlideRule Paper](https://joss.theoj.org/papers/10.21105/joss.04982.pdf)
