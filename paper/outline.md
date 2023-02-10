@@ -12,8 +12,8 @@
 - HyP3 description
     - HyP3 development history
       - Started as a student summer intern project at UAF in 2016
-      - ASF DAAC was entirely on prem in 2016, and pivot to AWS was on the horizon with rumblings of NISAR
-      - Origionally designed for either on-prem or AWS
+      - ASF DAAC was entirely on-prem in 2016, and pivot to AWS was on the horizon with rumblings of NISAR
+      - Originally designed for either on-prem or AWS
         - Had hybrid of both on-prem and cloud components
         - Emphasis on subscriptions
       - ASF transition to AWS made evident the benefits of transitioning fully to the cloud

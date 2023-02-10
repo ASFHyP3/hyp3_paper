@@ -1,8 +1,12 @@
 AOI
 AOIs
 ASF
+ASF's
+BGC
+Cargill
 CloudFormation
 cookiecutter
+DAAC
 DockerizedTopsApp
 DynamoDB
 ECR
@@ -34,7 +38,9 @@ JOSS
 JPL
 JS
 lifecycle
+NISAR
 NoSQL
+on-prem
 OnDemand
 OpenAPI
 polarizations
@@ -46,6 +52,7 @@ S3
 SAR
 scalable
 Sentinel-1
+serverless
 TODO
 UAF
 UI
