@@ -9,6 +9,7 @@ cookiecutter
 DAAC
 DockerizedTopsApp
 DynamoDB
+EarthData
 ECR
 entrypoint
 entrypoints
@@ -30,6 +31,7 @@ HyP3-GAMMA
 HyP3-paper
 HyP3-SDK
 IaC
+ICESAT
 InSAR
 Interferogram
 Interferograms
@@ -53,6 +55,7 @@ SAR
 scalable
 Sentinel-1
 serverless
+SlideRule
 TODO
 UAF
 UI
