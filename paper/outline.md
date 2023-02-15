@@ -3,7 +3,7 @@
 ## Outline
 - Summary
 - Statement of need
-    - As remote sensing archives become larger its becoming infeasible to process this data locally
+    - As remote sensing archives become larger it is becoming infeasible to process this data locally
     - This has promoted the movement of workflows to the cloud
     - This is particularly true of SAR data, which is larger and more complex
     - Most SAR data require some pre-processing before they are analysis-ready
