@@ -1,4 +1,4 @@
-# Welcome to the HyP3-paper contributing guide
+# Welcome to the HyP3 JOSS manuscript contributing guide
 Thank you for taking the time to look at this work. This repository contains the manuscript that describes HyP3 and will be submitted to the Journal of Open Source Science. If you are not an author on the paper (e.g., are not or have never been on the HyP3 team) please refrain from making pull requests to this repository. Instead, please create an issue describing the changes you would like to see. After you submit your issue, a member of our team will review it.
 
 For HyP3 team members, please read the information below:
