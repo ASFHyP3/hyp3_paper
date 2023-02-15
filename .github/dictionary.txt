@@ -9,7 +9,7 @@ cookiecutter
 DAAC
 DockerizedTopsApp
 DynamoDB
-EarthData
+Earthdata
 ECR
 entrypoint
 entrypoints
@@ -21,15 +21,10 @@ Geocoded
 GitOps
 GUNW
 HyP3
-HyP3-autorift
-HyP3-AutoRIFT
-HyP3-autoRIFT
 hyp3-autorift
-HyP3-cookiecutter
-HyP3-gamma
-HyP3-GAMMA
-HyP3-paper
-HyP3-SDK
+hyp3-cookiecutter
+hyp3-gamma
+hyp3-paper
 IaC
 ICESAT
 InSAR
