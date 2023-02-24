@@ -12,8 +12,8 @@ cookiecutter
 Cookiecutter
 DAAC
 DockerizedTopsApp
-DynamoDB
 DWR
+DynamoDB
 Earthdata
 ECR
 entrypoint
@@ -49,12 +49,13 @@ polarizations
 PR
 pre-processing
 PRs
-RTC
 Riverwidth
+RTC
 S3
 SAR
-SDK
+SAR-specific
 scalable
+SDK
 Sentinel-1
 serverless
 SlideRule

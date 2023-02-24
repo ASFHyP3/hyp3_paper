@@ -38,9 +38,17 @@ TO DO
 
 TO DO
 
-# Mathematics
+# HyP3 Description
 
-TO DO
+## Development History
+HyP3 grew out of a need for a standardized pipeline to perform image processing workflows at the Alaska Satellite Facility (ASF) Distributed Active Archive Center (DAAC). HyP3 was initially created by a group of University of Alaska Fairbanks students in 2017 who were interning at ASF. These students created a prototype version of HyP3 that was designed to handle workflows that ran on-premise and in the AWS cloud. This prototype was iterated upon for several more years, and by 2019 it was capable of performing many SAR-specifc image processing workflows.
+
+By 2019 however, it was clear that re-designing HyP3 to take advantage of evolving technologies (namely the new AWS Batch service, infrastructure-as-code, and containerized workflows) would greatly improve its utility. Thus in 2019 HyP3 was re-designed to exist entirely within the AWS cloud and to encapsulate application-specific processing workflows within Docker containers. The re-design was completed in 2020, and on-demand SAR image processing services that utilized HyP3 (including RTC and InSAR processing) were made available to the public for free via an API, Python SDK, and ASF's data search website.
+
+Throughout 2020-2022 new image processing services were added to HyP3 including a glacier velocity tracking, and flood inundation mapping workflows and the user base grew to XX users producing XX image products on average every month. Since 2021, many groups have recognized the utility of HyP3. In 2022 HyP3 was deployed within NASA's Earthdata Cloud and many other deployments of HyP3 now exist at other institutions (see the Ongoing Projects section for details).
+
+## HyP3 Architecture
+
 
 # Citations
 
