@@ -16,6 +16,7 @@ DockerizedTopsApp
 DWR
 DynamoDB
 Earthdata
+EC2
 EC2-spot
 ECR
 entrypoint
@@ -67,3 +68,4 @@ UAF
 UI
 Unwrapped
 Watermap
+Well-Architected
