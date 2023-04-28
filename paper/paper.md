@@ -72,7 +72,10 @@ TO DO
 
 # Figures
 
-TO DO 
+TO DO
+
+![HyP3 Architecture](figures/hyp3_architecture.png)
+![HyP3 Plugin](figures/plugin_diagram.png)
 
 # Acknowledgments
 

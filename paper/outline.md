@@ -52,7 +52,7 @@
         - In 2022 HyP3 was migrated to NASA Earthdata Cloud with stable funding from NASA
     - HyP3 Architecture
         - platform 
-            - Figure: [Architecture diagram](https://drive.google.com/file/d/1wZUPGl4pY1qF5ojNSODJ6mF2CAiM-EaT/view?usp=sharing)
+            - Figure: [Architecture diagram](figures/hyp3_architecture.png)
                 - (buzzwords: - API Gateway, Lambda, DynamoDB, Step Functions, Batch, S3, Docker/Container, ECR, CloudWatch, CloudFormation)
             - Cloud-native (AWS) API-based processing workflow for satellite imagery 
             - High throughput, scalable and cost-effective computing, not high performance computing
@@ -115,5 +115,4 @@
     - All grants that have supported work
 
 ## Resources
-[HyP3 architecture simplified](https://docs.google.com/document/d/1HcSmjMB9YSBgyqb6WBZpu0euvIrzLlzLuCOI1cssGA0/edit)
 [SlideRule Paper](https://joss.theoj.org/papers/10.21105/joss.04982.pdf)
